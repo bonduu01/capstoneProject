@@ -1,45 +1,15 @@
 [![CircleCI](https://circleci.com/gh/bonduu01/udacityproject.svg?style=svg)](https://circleci.com/gh/bonduu01/udacityproject)
  
-Steps in Completing Your Project
-Step 1: Propose and Scope the Project
-     The plan of this project is to deploy a spring boot application generated for the capstone project.
-     Plan what your pipeline will look like.
-     Decide which options you will include in your Continuous Integration phase.
-     Use Jenkins.
-     Pick a deployment type - either rolling deployment or blue/green deployment.
-     For the Docker application you can either use an application which you come up with, or use an open-source application pulled from the Internet, or if you have no idea, you can use an Nginx “Hello World, my name is (student name)” application.
- 
-Step 2: Use Jenkins, and implement blue/green or rolling deployment.
- 
-     Create your Jenkins master box with either Jenkins and install the plugins you will need.
-     Set up your environment to which you will deploy code.
- 
-Step 3: Pick AWS Kubernetes as a Service, or build your own Kubernetes cluster.
- 
-     Use Ansible or CloudFormation to build your “infrastructure”; i.e., the Kubernetes Cluster.
-     It should create the EC2 instances (if you are building your own), set the correct networking settings, and deploy software to these instances.
-     As a final step, the Kubernetes cluster will need to be initialized. The Kubernetes cluster initialization can either be done by hand, or with Ansible/Cloudformation at the student’s discretion.
- 
-Step 4: Build your pipeline
- 
-     Construct your pipeline in your GitHub repository.
-     Set up all the steps that your pipeline will include.
-     Configure a deployment pipeline.
-     Include your Dockerfile/source code in the Git repository.
-     Include with your Linting step both a failed Linting screenshot and a successful Linting screenshot to show the Linter working properly.
- 
-Step 5: Test your pipeline
- 
-     Perform builds on your pipeline.
-     Verify that your pipeline works as you designed it.
-     Take a screenshot of the Jenkins pipeline showing deployment and a screenshot of your AWS EC2 page showing the newly created (for blue/green) or modified (for rolling) instances. Make sure you name your instances differently between blue and green deployments.
- 
-Submitting your Project
- 
- Make sure you have taken all the screenshots you need, as directed above, and create a text file with a link to your GitHub repo.
- 
- Zip up these screenshots and text file into a single doc, and this will constitute your project submission.
- 
- Before you submit your project, please make sure you have checked all of your work against the project rubric. If you find that you have not satisfied any area of the rubric, please revise your work before you submit it. This rubric is what your reviewer will be using to assess your work.
- 
- You'll then submit your project on the next page.
+## Project Overview
+
+This project is based on Udacity's final capstone project.
+
+
+## Project Specification
+
+####Step 1: Scope of Project
+
+The application used in this project is a spring boot application. The pipeline would consist of declarative steps to:
+
+* Connect to Github via jenkins.
+* After connecting, application would be built.
