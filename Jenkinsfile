@@ -8,7 +8,9 @@ pipeline {
          }
          stage('Lint HTML') {
               steps {
-                  sh 'tidy -q -e *.html'
+                //   sh 'tidy -q -e *.html'
+                sh 'ls /src/main/resources/templates/'
+                sh 'pwd'
               }
          }
         //  stage('Push image to dockerHub') {
