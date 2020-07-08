@@ -6,11 +6,11 @@ pipeline {
                  sh 'docker build --rm -t bonduu01/udacitycaptoneproject:"$BUILD_NUMBER" .'
              }
          }
-        //  stage('Lint HTML') {
-        //       steps {
-        //           sh 'tidy -q -e *.html'
-        //       }
-        //  }
+         stage('Lint HTML') {
+              steps {
+                  sh 'tidy -q -e *.html'
+              }
+         }
         //  stage('Push image to dockerHub') {
         //       steps {
         //           sh 'docker push bonduu01/udacityCaptoneProject:"$BUILD_NUMBER"'
