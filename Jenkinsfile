@@ -13,7 +13,7 @@ pipeline {
          }
          stage('Push image to dockerHub') {
               steps {
-                  sh 'docker push bonduu01/udacityCaptoneProject:"$BUILD_NUMBER"'
+                  sh 'docker push bonduu01/udacitycaptoneproject:"$BUILD_NUMBER"'
               }
          }
         //  stage('Upload to AWS') {
