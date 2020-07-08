@@ -3,7 +3,7 @@ pipeline {
      stages {
          stage('Build') {
              steps {
-                 sh 'sh docker_build.sh .'
+                 sh 'sh docker_build.sh'
              }
          }
          stage('Lint HTML') {
@@ -11,11 +11,11 @@ pipeline {
                 sh 'tidy -q -e /var/lib/jenkins/workspace/capstoneProject_master/src/main/resources/templates/*.html'
               }
          }
-         stage('Push image to dockerHub') {
-              steps {
-                  sh 'docker push bonduu01/udacitycaptoneproject:"$BUILD_NUMBER"'
-              }
-         }
+        //  stage('Push image to dockerHub') {
+        //       steps {
+        //           sh 'docker push bonduu01/udacitycaptoneproject:"$BUILD_NUMBER"'
+        //       }
+        //  }
         //  stage('Upload to AWS') {
         //       steps {
         //           withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_credential', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
