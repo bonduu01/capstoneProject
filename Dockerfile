@@ -9,4 +9,4 @@ RUN mvn validate
 
 RUN mvn clean install
 
-ENTRYPOINT ["java", "-jar", "target/CapstoneProjectApplication-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/capstoneProject-0.0.1-SNAPSHOT.jar"]
