@@ -3,7 +3,7 @@ pipeline {
      stages {
          stage('Build') {
              steps {
-                 sh 'docker build --rm -t bonduu01/udacityCaptoneProject:"$BUILD_NUMBER" .'
+                 sh 'docker build --rm -t bonduu01/udacitycaptoneproject:"$BUILD_NUMBER" .'
              }
          }
         //  stage('Lint HTML') {
