@@ -13,7 +13,7 @@ pipeline {
          }
          stage('Push image to dockerHub') {
               steps {
-                  sh 'sh docker_update.sh'
+                  sh 'sudo sh docker_update.sh'
               }
          }
         //  stage('Upload to AWS') {
