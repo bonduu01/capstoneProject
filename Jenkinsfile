@@ -6,16 +6,16 @@ pipeline {
                  sh 'docker build --rm -t bonduu01/udacityCaptoneProject:"$BUILD_NUMBER" .'
              }
          }
-         stage('Lint HTML') {
-              steps {
-                  sh 'tidy -q -e *.html'
-              }
-         }
-         stage('Push image to dockerHub') {
-              steps {
-                  sh 'docker push bonduu01/udacityCaptoneProject:"$BUILD_NUMBER"'
-              }
-         }
+        //  stage('Lint HTML') {
+        //       steps {
+        //           sh 'tidy -q -e *.html'
+        //       }
+        //  }
+        //  stage('Push image to dockerHub') {
+        //       steps {
+        //           sh 'docker push bonduu01/udacityCaptoneProject:"$BUILD_NUMBER"'
+        //       }
+        //  }
         //  stage('Upload to AWS') {
         //       steps {
         //           withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_credential', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
