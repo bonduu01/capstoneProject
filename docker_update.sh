@@ -2,4 +2,4 @@
 
 #Push docker file to Github
 
-docker push bonduu01/udacitycaptoneproject:latest
+sudo docker push bonduu01/udacitycaptoneproject:latest
