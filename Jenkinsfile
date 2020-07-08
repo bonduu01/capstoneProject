@@ -8,7 +8,7 @@ pipeline {
          }
          stage('Lint HTML') {
               steps {
-                  tidy -q -e /var/lib/jenkins/workspace/capstoneProject_master/src/main/resources/templates/*.html
+                sh 'tidy -q -e /var/lib/jenkins/workspace/capstoneProject_master/src/main/resources/templates/*.html'
               }
          }
         //  stage('Push image to dockerHub') {
