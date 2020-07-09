@@ -15,4 +15,6 @@ RUN mvn clean install
 
 EXPOSE 8080
 
+
+FROM openjdk:8-jre-alpine
 ENTRYPOINT ["java", "-jar", "target/capstoneProject-0.0.1-SNAPSHOT.jar"
