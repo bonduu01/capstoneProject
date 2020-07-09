@@ -1,25 +1,17 @@
 #!/usr/bin/env bash
 
-whoami >> /app/whomai.txt
+#Pulls docker image from DockerHub
 
-# #Pulls docker image from DockerHub
+docker pull bonduu01/udacitycaptoneproject:latest
 
-# docker pull bonduu01/udacitycaptoneproject:latest
+#docker deploy command to deploy application as a container
 
-# #docker deploy command to deploy application as a container
+docker run -d -p 8282:8080 --name udacitycaptoneproject bonduu01/udacitycaptoneproject:latest
 
-# docker run -d -p 8282:8080 --name udacitycaptoneproject bonduu01/udacitycaptoneproject:latest
+#The load-balancer.yml creates a deployment, associated replica sets with 3 pods, each of which runs the udacitycaptoneproject application.
 
-# #Deploys image into target server into AWS server with static private ip: 172.31.6.246
+kubectl apply -f /app/load-balancer.yaml
 
-# kubectl create deployment udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest
+#Expose deployed service
 
-# #Run as a load balanced service
-
-# kubectl apply -f /app/load-balancer.yaml
-
-# #kubectl run udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest --port=8080
-
-# #Expose deployed service
-
-# kubectl expose deployment udacitycapstoneproject --type=LoadBalancer --name=udacitycapstoneproject-service
+kubectl expose deployment udacitycapstoneproject --type=LoadBalancer --name=udacitycapstoneproject-service
