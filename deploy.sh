@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-whoami
+whoami >> /app/whomai.txt
 
 # #Pulls docker image from DockerHub
 
