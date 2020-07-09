@@ -5,10 +5,14 @@ WORKDIR /build/
 COPY pom.xml /build/
 COPY src /build/src/
 
+ADD https://get.aquasec.com/microscanner .
+RUN chmod +x microscanner
+RUN ./microscanner NThmZjVjZDk1NDlh
+
 RUN mvn validate
 
 RUN mvn clean install
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "target/capstoneProject-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/capstoneProject-0.0.1-SNAPSHOT.jar"

@@ -7,9 +7,18 @@ This project is based on Udacity's final capstone project.
 
 ## Project Specification
 
-####Step 1: Scope of Project
+##Summary of Capstone Project
 
-The application used in this project is a spring boot application. The pipeline would consist of declarative steps to:
 
-* Connect to Github via jenkins.
-* After connecting, application would be built.
+##Step 1
+* Created a springboot application to display "Welcome to Udacity Captone Project Hello Udacity Reviewer, My name is Peter Molokwu and this is my final Captone project on Udacity's Nano program Cloud DevOps Engineer"
+* Springboot application is configured on application.properties file to run on port 8080.
+
+##Step 2
+
+* A repository name capstoneProject is created on github, github url: https://github.com/bonduu01/capstoneProject.git
+* git pull request is initiated to pull repository into local system.
+
+##Step 3
+
+* Dockerfile is created
