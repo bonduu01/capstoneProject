@@ -8,6 +8,7 @@
        with_items:
          - deploy.sh
          - load-balancer.yaml
+         - nginx.conf
        #copy: src=/var/lib/jenkins/workspace/capstoneProject_master/load-balancer.yaml dest=/app/ mode=0755
 
      - name: Execute the script
