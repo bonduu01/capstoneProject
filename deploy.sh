@@ -1,23 +1,25 @@
 #!/usr/bin/env bash
 
-#Pulls docker image from DockerHub
+whoami
 
-docker pull bonduu01/udacitycaptoneproject:latest
+# #Pulls docker image from DockerHub
 
-#docker deploy command to deploy application as a container
+# docker pull bonduu01/udacitycaptoneproject:latest
 
-docker run -d -p 8282:8080 -name udacitycaptoneproject bonduu01/udacitycaptoneproject:latest
+# #docker deploy command to deploy application as a container
 
-#Deploys image into target server into AWS server with static private ip: 172.31.6.246
+# docker run -d -p 8282:8080 --name udacitycaptoneproject bonduu01/udacitycaptoneproject:latest
 
-kubectl create deployment udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest
+# #Deploys image into target server into AWS server with static private ip: 172.31.6.246
 
-#Run as a load balanced service
+# kubectl create deployment udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest
 
-kubectl apply -f /app/load-balancer.yaml
+# #Run as a load balanced service
 
-#kubectl run udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest --port=8080
+# kubectl apply -f /app/load-balancer.yaml
 
-#Expose deployed service
+# #kubectl run udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest --port=8080
 
-kubectl expose deployment udacitycapstoneproject --type=LoadBalancer --name=udacitycapstoneproject-service
+# #Expose deployed service
+
+# kubectl expose deployment udacitycapstoneproject --type=LoadBalancer --name=udacitycapstoneproject-service
