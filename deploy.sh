@@ -17,3 +17,7 @@ kubectl create deployment udacitycapstoneproject --image=bonduu01/udacitycaptone
 kubectl apply -f /app/load-balancer.yaml
 
 #kubectl run udacitycapstoneproject --image=bonduu01/udacitycaptoneproject:latest --port=8080
+
+#Expose deployed service
+
+kubectl expose deployment udacitycapstoneproject --type=LoadBalancer --name=udacitycapstoneproject-service
