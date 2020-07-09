@@ -5,9 +5,9 @@ WORKDIR /build/
 COPY pom.xml /build/
 COPY src /build/src/
 
-ADD https://get.aquasec.com/microscanner .
-RUN chmod +x microscanner
-RUN ./microscanner NThmZjVjZDk1NDlh
+# ADD https://get.aquasec.com/microscanner .
+# RUN chmod +x microscanner
+# RUN ./microscanner NThmZjVjZDk1NDlh
 
 RUN mvn validate
 
