@@ -21,4 +21,5 @@ This project is based on Udacity's final capstone project.
 
 ##Step 3
 
-* Dockerfile is created
+* Dockerfile is created, on docker file, application jar target/capstoneProject-0.0.1-SNAPSHOT.jar is created when Dockerfile is built.
+* 

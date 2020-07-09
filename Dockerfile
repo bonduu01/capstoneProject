@@ -15,4 +15,4 @@ RUN mvn clean install
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "target/capstoneProject-0.0.1-SNAPSHOT.jar"
+ENTRYPOINT ["java", "-jar", "target/capstoneProject-0.0.1-SNAPSHOT.jar"]
