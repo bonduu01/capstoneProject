@@ -39,7 +39,7 @@ server {
  error_log /var/log/nginx/mini-error.log;
 
 # The internal IP of the VM that host you Apache config
- set $upstream $var:8080;
+ set \$upstream $var:8080;
 
    location / {
 
