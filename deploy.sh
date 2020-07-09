@@ -16,11 +16,12 @@ kubectl apply -f /app/load-balancer.yaml
 
 kubectl expose deployment udacitycapstoneproject --type=LoadBalancer --name=udacitycapstoneproject-service
 
-#installs nginx, enable nginx service and starts service
-apt install nginx -y && systemctl enable nginx && systemctl restart nginx
-
 #Command to retrieve external load balancer ip address and store into file path /app
+rm -rf /app/cluster.txt
 kubectl get services udacitycapstoneproject-service >> /app/cluster.txt
+
+#installs nginx, enable nginx service and starts service
+apt install nginx -y && systemctl enable nginx
 
 #Retrive and store in a variable external IP address stored in /app/cluster.txt
 var="$(grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' /app/cluster.txt)"
