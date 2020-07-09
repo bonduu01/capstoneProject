@@ -18,7 +18,7 @@ pipeline {
          }
          stage('Deploy to production') {
               steps {
-                  sh 'ansible-playbook -i inventory deploy.yml'
+                  sh 'ansible-playbook -i /var/lib/jenkins/workspace/capstoneProject_master/inventory /var/lib/jenkins/workspace/capstoneProject_master/deploy.yml'
               }
          }
      }
