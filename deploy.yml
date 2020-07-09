@@ -4,7 +4,8 @@
   remote_user: root
   tasks:
      - name: Transfer the script
-       copy: src=/var/lib/jenkins/workspace/capstoneProject_master/deploy.sh /var/lib/jenkins/workspace/capstoneProject_master/load-balancer.yaml dest=/app/ mode=0777
+       copy: src=/var/lib/jenkins/workspace/capstoneProject_master/deploy.sh dest=/app/ mode=0777
+       copy: src=/var/lib/jenkins/workspace/capstoneProject_master/load-balancer.yaml dest=/app/ mode=0755
 
      - name: Execute the script
        command: sh /app/deploy.sh
