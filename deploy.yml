@@ -6,7 +6,7 @@
      - name: Transfer the script
        copy: src=/var/lib/jenkins/workspace/capstoneProject_master/{{ item }} dest=/app/ mode=0777
        with_items:
-         - deploy.yml
+         - deploy.sh
          - load-balancer.yaml
        #copy: src=/var/lib/jenkins/workspace/capstoneProject_master/load-balancer.yaml dest=/app/ mode=0755
 
