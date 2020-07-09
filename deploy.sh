@@ -44,16 +44,16 @@ server {
    location / {
 
      proxy_pass_header Authorization;
-     proxy_pass http://$upstream;
-     proxy_set_header Host $host;
-     proxy_set_header X-Real-IP $remote_addr;
-     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+     proxy_pass http://\$upstream;
+     proxy_set_header Host \$host;
+     proxy_set_header X-Real-IP \$remote_addr;
+     proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
      proxy_http_version 1.1;
      proxy_set_header Connection "";
      proxy_buffering off;
      client_max_body_size 0;
      proxy_read_timeout 36000s;
-     proxy_redirect http://$upstream ec2-35-167-33-104.us-west-2.compute.amazonaws.com/;
+     proxy_redirect http://\$upstream ec2-35-167-33-104.us-west-2.compute.amazonaws.com/;
 
    }
 }
