@@ -5,23 +5,23 @@ This project is based on Udacity's final capstone project.
 
 ## Project Specification
 
-##Summary of Capstone Project
+### Summary of Capstone Project
 
 
-##Step 1 Springboot application
+#### Step 1 Springboot application
 * Created a springboot application to display "Welcome to Udacity Captone Project Hello Udacity Reviewer, My name is Peter Molokwu and this is my final Captone project on Udacity's Nano program Cloud DevOps Engineer"
 * Springboot application is configured on application.properties file to run on port 8080.
 
-##Step 2 Github Repository
+#### Step 2 Github Repository
 
 * A repository name capstoneProject is created on github, github url: https://github.com/bonduu01/capstoneProject.git
 * git pull request is initiated to pull repository into local system.
 
-##Step 3 Jenkins
+#### Step 3 Jenkins
 
 Jenkins application is installed on target server. all dependent plugins are installed.
 
-##Step 4: JenkinsFile
+#### Step 4: JenkinsFile
 
 * Dockerfile is created, on docker file, application jar target/capstoneProject-0.0.1-SNAPSHOT.jar is created when Dockerfile is built.
 * docker_build.sh contains script to build.
@@ -29,7 +29,7 @@ Jenkins application is installed on target server. all dependent plugins are ins
 * docker_update.sh pushes created docker image to dockerhub.
 * Ansible command is finally used to deploy into target server using information contained in inventory file and deploy.yml.
 
-##Step 5 Deployment processes
+#### Step 5 Deployment processes
 
 * The deploy.yml file contains tasks which is: copy deploy.sh, load-balancer.yaml and nginx.conf to target deployment server.
 * Afterwards, the deploy.sh file is run locally on target server.
@@ -44,7 +44,7 @@ Jenkins application is installed on target server. all dependent plugins are ins
   8. nginx config is setup with loadbalanced external ip address and aws public dns.
   9. The Docker container deployed into a Kubernetes cluster, configured and proxied to nginx can be viewed via url: http://ec2-35-167-33-104.us-west-2.compute.amazonaws.com/ note: kubenetes deploy image.png
   
-##Images
+#### Images
 
 - 1.png: This image represents the build step.
 - 2.png: This image represents the lint step.
