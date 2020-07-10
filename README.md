@@ -1,6 +1,4 @@
-#[![CircleCI](https://circleci.com/gh/bonduu01/udacityproject.svg?style=svg)](https://circleci.com/gh/bonduu01/udacityproject)
- 
-## Project Overview
+ ## Project Overview
 
 This project is based on Udacity's final capstone project.
 
